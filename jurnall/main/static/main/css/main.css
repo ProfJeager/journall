@@ -1,0 +1,241 @@
+body {
+    background: white;
+    color: #4fc6eb;
+    margin: 0;
+}
+
+
+/* Additional styling for the form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Align text to the left within form controls */
+.form-control {
+    text-align: left;
+}
+
+/* Styling for the contact form */
+.contact-form {
+    background-color: white; /* Light background color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the submit button */
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    border-color: #0056b3;
+}
+
+/* Styling for social icons */
+.social-icons a {
+    color: #007bff;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+/* Adjust form width on smaller screens */
+@media (max-width: 576px) {
+    .contact-form {
+        padding: 15px; /* Adjust the padding for smaller screens */
+    }
+}
+
+
+
+.downloadButton {
+    background-color: #4fc6eb;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border: 2px solid #4fc6eb;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.downloadButton:hover {
+    background-color: #2b92b8;
+    color: white;
+}
+#viewPdfButton {
+    background-color: #4fc6eb;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border: 2px solid #4fc6eb;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#viewPdfButton:hover {
+    background-color: #2b92b8;
+    color: white;
+}
+
+.viewButton {
+    background-color: #4fc6eb;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border: 2px solid #4fc6eb;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.viewButton:hover {
+    background-color: #2b92b8;
+    color: white;
+}
+
+.viewCertificateButton {
+    background-color: #4fc6eb;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border: 2px solid #4fc6eb;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.viewCertificateButton:hover {
+    background-color: #2b92b8;
+    color: white;
+}
+aside {
+    float: left;
+    background: rgba(223, 247, 253, 0.842);
+    width: 15%;
+    padding: 3.5%;
+    height: 300vh;
+    color: #fff;
+    border-right: 5px solid #ffffff;
+    margin-bottom: 20px; /* Add space below the aside element */
+    margin-right: 25px;
+}
+
+aside img {
+    width: 180px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+ul{
+    position: right;
+    top: 20px;
+    left: 20px;
+}
+
+
+aside ul {list-style: none; margin-top: 20px;}
+aside ul li{
+    color: #4fc6eb;
+    display: block;
+    margin-top: 20px;
+    transition: transform .5s ease;
+}
+
+aside ul li:hover, aside a:hover{
+    color: #333;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    color: #4fc6eb;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {font-size: 50px;}
+main .features h4 {font-size: 50px;}
+main h5 {font-size: 18px; color: #333;}
+main .features p {max-width: 740px; margin: 20px auto;}
+
+h4{
+    padding: 10px;
+    margin: 10px;
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 940px;
+    margin: 15px 10%;
+    text-align: left;
+}
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+
+.dropdown-menu {
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(223, 247, 253, 0.842); /* Set the background color here */
+}
+
+.dropdown-item {
+    background-color: rgba(223, 247, 253, 0.842);
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(223, 247, 253, 0.9); /* You can adjust the alpha (last value) as needed */
+}
+
+/* Custom color for the Articles menu */
+.nav-item.dropdown:hover .nav-link {
+    color: #333;
+    background-color: transparent; /* Assuming you want no background color on hover */
+}
+
+.nav-item.dropdown .nav-link {
+    color: #4fc6eb;
+    transition: background-color 0.3s ease;
+}
+.nav-link {
+    color: #4fc6eb;
+}

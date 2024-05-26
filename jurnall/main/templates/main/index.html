@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="features">
+        {% for article in articles %}
+            <div class="alert alert-warning">
+                <b><u style="color: #910720;">{{ article.articlesnumber }}</u></b><br>
+                <h6 style="color: #2964a4;"><b>{{ article.title }}</b></h6>
+    
+                <b><i>{{ article.owner }}</i></b>
+                <br>
+                <br>
+                Published: {{ article.datenow }}
+                <br>
+                <!-- Ensure that data attributes are populated correctly -->
+                <button class="downloadButton" data-filename="{{ article.file_name }}">Download PDF</button>
+                <button class="viewButton" data-filename="{{ article.file_name }}">View PDF</button>
+                <button class="viewCertificateButton" data-certificate="{{ article.c_name }}">
+                    View Certificate
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <!-- templates/news/news_home.html -->
+    <script>
+    // JavaScript code
+    document.querySelectorAll('.downloadButton, .viewButton, .viewCertificateButton').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var pdfFilename = this.getAttribute('data-filename');
+            var certificateFile = this.getAttribute('data-certificate');
+            var downloadUrl = "media/" + encodeURIComponent(pdfFilename);
+            var certificateUrl = "media/certificates/" + (certificateFile ? encodeURIComponent(certificateFile) : "");
+    
+            console.log("PDF Filename:", pdfFilename);
+            console.log("Certificate Filename:", certificateFile);
+    
+            if (button.classList.contains('downloadButton')) {
+                // Download PDF
+                var link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = pdfFilename;
+                link.type = 'application/pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else if (button.classList.contains('viewButton')) {
+                // View PDF in the browser
+                window.open(downloadUrl, '_blank');
+            } else if (button.classList.contains('viewCertificateButton')) {
+                if (certificateFile) {
+                    // View Certificate in the browser
+                    window.open(certificateUrl, '_blank');
+                } else {
+                    console.error("Certificate file is not set.");
+                }
+            }
+        });
+    });
+    
+    
+    </script>
+    
+    
+</body>
+</html>
